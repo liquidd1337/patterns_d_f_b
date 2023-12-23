@@ -15,20 +15,6 @@ impl Pizza for PlainPizza {
     }
 }
 
-struct PizzaDecorator {
-    pub pizza: Box<dyn Pizza>,
-}
-
-impl Pizza for PizzaDecorator {
-    fn description(&self) -> String {
-        self.pizza.description()
-    }
-
-    fn cost(&self) -> f32 {
-        self.pizza.cost()
-    }
-}
-
 pub struct Mozzarella {
     pub pizza: Box<dyn Pizza>,
 }
